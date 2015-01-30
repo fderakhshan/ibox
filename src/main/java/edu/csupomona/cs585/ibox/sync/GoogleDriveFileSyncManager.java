@@ -31,6 +31,7 @@ public class GoogleDriveFileSyncManager implements FileSyncManager {
 
 	@Override
 	public void updateFile(java.io.File localFile) throws IOException {
+		//Update a file
 		String fileId = getFileId(localFile.getName());
 		if (fileId == null) {
 			addFile(localFile);
@@ -45,6 +46,7 @@ public class GoogleDriveFileSyncManager implements FileSyncManager {
 
 	@Override
 	public void deleteFile(java.io.File localFile) throws IOException {
+		//Delete a file
 		String fileId = getFileId(localFile.getName());
 		if (fileId == null) {
 			throw new FileNotFoundException();
